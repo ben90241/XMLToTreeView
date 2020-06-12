@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 
-namespace DatabaseToTreeview
+namespace XMLToTreeview
 {
     public partial class Form1 : Form
     {
@@ -88,6 +88,18 @@ namespace DatabaseToTreeview
             catch (Exception)
             {
 
+            }
+        }
+
+        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox1.Checked)
+            {
+                treeView1.ExpandAll();
+            }
+            else
+            {
+                treeView1.CollapseAll();
             }
         }
     }
